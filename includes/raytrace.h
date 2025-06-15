@@ -15,7 +15,7 @@
 # define HEIGHT 900
 # define EVENT_CLOSE 17
 # define MASK_NO_EVENT 0L
-# define NUMBER_OF_RAYS 50
+# define NUMBER_OF_RAYS 100
 typedef struct s_mlx
 {
 	void *mlx;
