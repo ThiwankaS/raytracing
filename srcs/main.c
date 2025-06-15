@@ -4,10 +4,10 @@ int main(void)
 {
 	t_mlx mlx;
 	t_state state;
-	t_circle circle = {300, 300 , 80, 0xFFA500 };
+	t_circle circle = {100, 200 , 30, 0xFFA500 };
 	t_circle shadow_circle = {600, 500 , 120, 0x00FFF0};
 	t_ray rays[NUMBER_OF_RAYS];
-	
+
 	mlx.mlx = mlx_init();
 	mlx.win = mlx_new_window(mlx.mlx, WIDTH, HEIGHT, "Raytracing");
 	mlx.img = mlx_new_image(mlx.mlx, WIDTH, HEIGHT);
