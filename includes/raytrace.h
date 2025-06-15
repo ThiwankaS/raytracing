@@ -10,8 +10,8 @@
 # include "../ft_libft/get_next_line.h"
 # include "../minilibx-linux/mlx.h"
 
-# define WIDTH 800
-# define HEIGHT 600
+# define WIDTH 1000
+# define HEIGHT 900
 # define EVENT_CLOSE 17
 # define MASK_NO_EVENT 0L
 typedef struct s_mlx
@@ -44,6 +44,7 @@ typedef struct s_state
 {
 	t_mlx *mlx;
 	t_circle *circle;
+	t_circle *shadow_circle;
 	int drag;
 	int offset_x;
 	int offset_y;
