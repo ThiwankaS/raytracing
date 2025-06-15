@@ -40,4 +40,24 @@ typedef struct s_circle
 	int color;
 } t_circle;
 
+typedef struct s_state
+{
+	t_mlx *mlx;
+	t_circle *circle;
+	int drag;
+	int offset_x;
+	int offset_y;
+} t_state;
+
+void draw_circle(t_mlx *mlx, t_circle *c);
+
+int close_window(t_mlx *mlx);
+void clear_image(t_mlx *mlx);
+void put_pixel(t_mlx *mlx, int x, int y, int color);
+void draw_and_refresh(t_state *state);
+
+int on_mouse_press(int button, int x, int y, t_state *state);
+int on_mouse_release(int button, int x, int y, t_state *state);
+int on_mouse_move(int x, int y, t_state *state);
+
 #endif
