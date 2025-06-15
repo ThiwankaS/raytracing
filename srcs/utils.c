@@ -28,5 +28,7 @@ void draw_and_refresh(t_state *state)
 	clear_image(state->mlx);
 	draw_circle(state->mlx, state->shadow_circle);
 	draw_circle(state->mlx, state->circle);
+	generate_rays(state->circle, state->rays);
+	draw_rays(state, 0x808080);
 	mlx_put_image_to_window(state->mlx->mlx, state->mlx->win, state->mlx->img, 0, 0);
 }

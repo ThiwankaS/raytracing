@@ -15,9 +15,11 @@ MLX_REPO		= https://github.com/42Paris/minilibx-linux
 
 SRC_PROGRM		= \
 					srcs/circle.c\
-					srcs/utils.c\
-					srcs/motion.c\
 					srcs/main.c\
+					srcs/motion.c\
+					srcs/utils.c\
+					srcs/rays.c\
+
 
 OBJ_PROGRM		= $(SRC_PROGRM:.c=.o)
 
