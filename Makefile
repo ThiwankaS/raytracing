@@ -14,6 +14,9 @@ MLX_LIB			= $(MLX_DIR)/libmlx_Linux.a
 MLX_REPO		= https://github.com/42Paris/minilibx-linux
 
 SRC_PROGRM		= \
+					srcs/circle.c\
+					srcs/utils.c\
+					srcs/motion.c\
 					srcs/main.c\
 
 OBJ_PROGRM		= $(SRC_PROGRM:.c=.o)
