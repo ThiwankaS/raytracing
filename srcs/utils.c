@@ -26,6 +26,7 @@ void put_pixel(t_mlx *mlx, int x, int y, int color)
 void draw_and_refresh(t_state *state)
 {
 	clear_image(state->mlx);
+	draw_circle(state->mlx, state->shadow_circle);
 	draw_circle(state->mlx, state->circle);
 	mlx_put_image_to_window(state->mlx->mlx, state->mlx->win, state->mlx->img, 0, 0);
 }

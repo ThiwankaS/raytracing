@@ -38,6 +38,7 @@ int on_mouse_move(int x, int y, t_state *state)
 	{
 		state->circle->x = x - state->offset_x;
 		state->circle->y = y - state->offset_y;
+		draw_circle(state->mlx, state->shadow_circle);
 		draw_and_refresh(state);
 		return (1);
 	}
