@@ -4,8 +4,9 @@ int main(void)
 {
 	t_mlx mlx;
 	t_state state;
-	t_circle circle = {300, 300 , 80, 0xFFA500 };
+	t_circle circle = {100, 200 , 30, 0xFFA500 };
 	t_circle shadow_circle = {600, 500 , 120, 0x00FFF0};
+	t_ray rays[NUMBER_OF_RAYS];
 
 	mlx.mlx = mlx_init();
 	mlx.win = mlx_new_window(mlx.mlx, WIDTH, HEIGHT, "Raytracing");
@@ -17,6 +18,7 @@ int main(void)
 	state.drag = 0;
 	state.offset_x = 0;
 	state.offset_y = 0;
+	state.rays = rays;
 	draw_and_refresh(&state);
 	mlx_hook(mlx.win, EVENT_CLOSE, MASK_NO_EVENT, close_window, &mlx);
 	mlx_hook(mlx.win, 2, 1L << 0, on_mouse_press, &state);
